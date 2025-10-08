@@ -1,0 +1,7 @@
+# Data
+books
+
+# Auto-generated files
+*.pyc
+*pycache*
+.venv
