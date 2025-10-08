@@ -17,6 +17,9 @@ def create_list_of_dict(dict):
     new_list=[]
      # Iterate over the items in each dictionary   
     for key in dict:
+        # Skip characters that aren't letters
+        if not key.isalpha():
+            continue
         new_list.append({"char": key, "num": dict[key] })
     return new_list
 
@@ -27,7 +30,6 @@ def sort_on(items):
 def sort_list_of_dicts(list_of_dicts):
     # print(list_of_dicts)
     list_of_dicts.sort(reverse=True, key=sort_on)
-
     return list_of_dicts
 
 
